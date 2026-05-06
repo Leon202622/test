@@ -1,0 +1,5 @@
+GitHub Pages redeploy marker
+
+Purpose: refresh GitHub Pages after jacquard teal background update.
+Updated: 2026-05-06T17:20:00+09:00
+Latest target page: mockups/04-jacquard-black/index.html
