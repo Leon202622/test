@@ -1,1 +1,165 @@
-body{margin:0;font-family:Georgia,serif;background:#edf1f3;color:#3a4953}.hero{padding:60px 20px;text-align:center;background:#dbe4ea;border-bottom:1px solid #92a5b3}main{padding:20px;max-width:850px;margin:auto}section{background:#fff;margin:14px 0;padding:16px 18px;box-shadow:0 3px 10px rgba(90,110,120,.15)}.cta a{display:inline-block;border:1px solid #6d8596;color:#3a4953;padding:9px 13px;text-decoration:none;margin:5px}.gallery{display:flex;flex-wrap:wrap;gap:10px}.gallery div{flex:1 1 140px;border:1px dashed #7f95a3;padding:30px 8px;text-align:center}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Georgia, "Hiragino Mincho ProN", "Yu Mincho", serif;
+  background:
+    radial-gradient(circle at 15% 10%, rgba(255,255,255,.85), transparent 0 7rem),
+    radial-gradient(circle at 85% 20%, rgba(139,160,174,.22), transparent 0 9rem),
+    repeating-radial-gradient(circle at 0 0, rgba(90,112,128,.055) 0 2px, transparent 2px 28px),
+    #e3e8ea;
+  color: #314452;
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: 70px 20px 64px;
+  text-align: center;
+  color: #263846;
+  background:
+    radial-gradient(circle at 50% 22%, rgba(255,255,255,.62), transparent 0 8rem),
+    radial-gradient(circle at 20% 28%, rgba(80,103,122,.16) 0 .18rem, transparent .2rem),
+    radial-gradient(circle at 80% 28%, rgba(80,103,122,.16) 0 .18rem, transparent .2rem),
+    repeating-linear-gradient(135deg, rgba(255,255,255,.18) 0 2px, transparent 2px 20px),
+    linear-gradient(145deg, #9eb2bf, #c7d2d8 58%, #e8ecec);
+  border-bottom: 1px solid #6f8798;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 16px;
+  border: 1px solid rgba(67,88,103,.35);
+  outline: 1px solid rgba(255,255,255,.55);
+  outline-offset: 6px;
+  pointer-events: none;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 36px;
+  opacity: .72;
+  background:
+    radial-gradient(ellipse at center, rgba(67,88,103,.42) 0 22%, transparent 23%),
+    radial-gradient(circle at center, rgba(255,255,255,.72) 0 2px, transparent 2.5px),
+    linear-gradient(90deg, transparent, rgba(67,88,103,.34), transparent);
+  background-size: 62px 28px, 31px 28px, 100% 1px;
+  background-position: 0 4px, 15px 8px, center 17px;
+}
+
+.eyebrow {
+  letter-spacing: .18em;
+  color: #4c6475;
+  text-transform: uppercase;
+  font-size: .78rem;
+}
+
+h1 {
+  margin: .2em 0;
+  font-size: clamp(2.1rem, 11vw, 4.2rem);
+  letter-spacing: .035em;
+}
+
+.catch {
+  line-height: 1.8;
+}
+
+main {
+  padding: 20px;
+  max-width: 880px;
+  margin: auto;
+}
+
+section {
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(120deg, rgba(255,255,255,.86), rgba(248,246,240,.96)),
+    #fff;
+  margin: 16px 0;
+  padding: 18px 20px;
+  border: 1px solid rgba(95,119,136,.32);
+  box-shadow: 0 12px 28px rgba(62,82,96,.14);
+}
+
+section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: .14;
+  background:
+    radial-gradient(circle at 18px 18px, #5b7180 0 2px, transparent 2.5px),
+    radial-gradient(ellipse at 36px 18px, #5b7180 0 6px, transparent 6.5px),
+    radial-gradient(ellipse at 0 18px, #5b7180 0 6px, transparent 6.5px);
+  background-size: 72px 36px;
+  pointer-events: none;
+}
+
+section > * {
+  position: relative;
+}
+
+h2 {
+  color: #2f4555;
+  margin-top: 0;
+  padding-bottom: 9px;
+  border-bottom: 1px solid rgba(95,119,136,.28);
+}
+
+h2::before {
+  content: "❦";
+  color: #7a93a3;
+  margin-right: .45em;
+}
+
+.cta a {
+  display: inline-block;
+  border: 1px solid #536f82;
+  color: #253844;
+  background: linear-gradient(135deg, #eef2f2, #bdccd4);
+  padding: 10px 14px;
+  border-radius: 999px;
+  text-decoration: none;
+  margin: 5px;
+}
+
+ul {
+  padding-left: 1.2em;
+  line-height: 1.9;
+}
+
+.event {
+  display: inline-block;
+  padding: 10px 12px;
+  background: rgba(158,178,191,.18);
+  border-left: 4px solid #6f8798;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.gallery div {
+  min-height: 90px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  color: #496274;
+  border: 1px dashed #6f8798;
+  background:
+    radial-gradient(circle at 50% 22%, rgba(83,111,130,.22) 0 8px, transparent 8.5px),
+    linear-gradient(135deg, #f7f8f5, #dce5e8);
+}
+
+@media (min-width: 720px) {
+  .gallery {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
